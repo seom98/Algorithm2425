@@ -1,0 +1,1 @@
+interface Main{static void main(String[]x){char[]c=new java.util.Scanner(System.in).nextLine().toCharArray();System.out.print(c[0]+c[2]-96);}}
