@@ -1,0 +1,1 @@
+interface Main{static void main(String[]z)throws Exception{int a=System.in.read();System.out.print("Naver "+(a==78|a==110?"D2":"Whale"));}}
