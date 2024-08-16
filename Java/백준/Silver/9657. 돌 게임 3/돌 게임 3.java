@@ -1,0 +1,1 @@
+interface Main{static void main(String[]z){int a=new java.util.Scanner(System.in).nextInt();System.out.print(a%7==2|a%7<1?"CY":"SK");}}
