@@ -1,0 +1,1 @@
+interface Main{static void main(String[]z){long N=new java.util.Scanner(System.in).nextLong();System.out.print(N%2<1?N/2*(N-1):N/2*N);}}
