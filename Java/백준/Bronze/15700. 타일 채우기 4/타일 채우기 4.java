@@ -1,0 +1,1 @@
+import java.util.*;interface Main{static void main(String[]z){Scanner c=new Scanner(System.in);System.out.print(c.nextLong()*c.nextLong()/2);}}
