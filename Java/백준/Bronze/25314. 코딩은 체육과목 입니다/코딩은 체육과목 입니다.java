@@ -1,0 +1,1 @@
+interface Main{static void main(String[]q){int N=new java.util.Scanner(System.in).nextInt()/4;String s="";while(N-->0)s+="long ";System.out.print(s+"int");}}
