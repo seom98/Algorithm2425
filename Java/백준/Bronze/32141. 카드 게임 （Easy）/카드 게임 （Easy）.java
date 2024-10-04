@@ -1,0 +1,1 @@
+import java.util.*;interface Main{static void main(String[]z){Scanner c=new Scanner(System.in);int N=c.nextInt(),M=c.nextInt(),d[]=new int[N];for(int i=1;i<=N;i++){M-=c.nextInt();if(M<=0){System.out.print(i);return;}}System.out.print(-1);}}
