@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 class Main{
-	static int N,C=0,v[],P1,S=1;
-	static ArrayList<ArrayList<int[]>>list=new ArrayList<>();
+	static int N,C=0,v[],P1;
+	static ArrayList<ArrayList<Integer>>list=new ArrayList<>();
 	static StringBuilder sb=new StringBuilder();
 
 	public static void main(String[]z)throws IOException{
@@ -12,12 +12,9 @@ class Main{
 		StringTokenizer T;
 		for(int n=1;n<N;n++){
 			T=new StringTokenizer(S.readLine());
-			int V=Integer.parseInt(T.nextToken()),
-				L=Integer.parseInt(T.nextToken()),
-				R=Integer.parseInt(T.nextToken());
-
-			list.get(V).add(new int[]{L,0});
-			list.get(V).add(new int[]{R,1});
+			int V=Integer.parseInt(T.nextToken());
+			list.get(V).add(Integer.parseInt(T.nextToken()));
+			list.get(V).add(Integer.parseInt(T.nextToken()));
 		}
 		DFS(1,0);
 		System.out.print(C-1);
@@ -26,18 +23,16 @@ class Main{
 	static void DFS(int p,int h){
 		sb.append(p + " ");
 		C++;
-		v[p]=1;
-		S++;
-		int l=list.get(p).get(0)[0];
-		int r=list.get(p).get(1)[0];
-		if(l!=-1&&v[l]==0){
+		int l=list.get(p).get(0);
+		int r=list.get(p).get(1);
+		if(l!=-1){
 			DFS(l,1);
 			sb.append(p + " ");
 			C++;
 		}
-		if(r!=-1&&v[r]==0) {
+		if(r!=-1) {
 			DFS(r,h);
-			if (h==1){
+			if(h==1){
 				sb.append(p + " ");
 				C++;
 			}
