@@ -25,11 +25,10 @@ class Main{
 			A2=Dijkstra(A,B),
 			A3=Dijkstra(B,N-1),
 			B1=Dijkstra(1,B),
-			B2=Dijkstra(B,A),
 			B3=Dijkstra(A,N-1);
 		if(A1>=0&&A2>=0&&A3>=0)A=A1+A2+A3;
 		else A=-1;
-		if(B1>=0&&B2>=0&&B3>=0)B=B1+B2+B3;
+		if(B1>=0&&A2>=0&&B3>=0)B=B1+A2+B3;
 		else B=-1;
 		System.out.print(A!=-1&&B!=-1?Math.min(A,B):Math.max(A,B));
 	}
