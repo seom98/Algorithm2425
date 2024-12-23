@@ -1,8 +1,1 @@
-import java.util.*;
-interface Main{
-	static void main(String[]z){
-		Scanner s=new Scanner(System.in);
-		int N=s.nextInt(),M=s.nextInt()+s.nextInt();
-		System.out.print((M/60+N)%24+" "+M%60);
-	}
-}
+interface Main{static void main(String[]z){var s=new java.util.Scanner(System.in);int M=s.nextInt()*60+s.nextInt()+s.nextInt();System.out.print(M/60%24+" "+M%60);}}
