@@ -17,10 +17,8 @@ class Main{
 			list.get(b).add(a);
 		}
 		for(int i=1;i<=N;i++){
-			if(!list.get(i).isEmpty()){
 				visited=new boolean[N+1];
 				DFS(i,i);
-			}
 		}
 		for(int i=1;i<=N;i++)max=count[i]>max?count[i]:max;
 		StringBuilder sb=new StringBuilder();
