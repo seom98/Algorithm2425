@@ -1,14 +1,19 @@
 import java.util.*;
+import java.io.*;
 class Main {
 	static int N,M,T,C=0,a[][];
 	static int[] dx={-1,0,1,0},dy={0,-1,0,1};
 	static boolean[][]v;
-	public static void main(String[]z){
-		Scanner s=new Scanner(System.in);
-		N=s.nextInt();M=s.nextInt();
+	public static void main(String[]z) throws IOException{
+		BufferedReader s=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer t=new StringTokenizer(s.readLine());
+		N=Integer.parseInt(t.nextToken());M=Integer.parseInt(t.nextToken());
 		a=new int[N][M];v= new boolean[N][M];
-		for(int i=0;i<N;i++)for(int j=0;j<M;j++)a[i][j]=s.nextInt()+s.nextInt()+s.nextInt();
-		T=s.nextInt()*3;
+		for(int i=0;i<N;i++){
+			t=new StringTokenizer(s.readLine());
+			for(int j=0;j<M;j++)for(int k=0;k<3;k++)a[i][j]+=Integer.parseInt(t.nextToken());
+		}
+		T=Integer.parseInt(s.readLine())*3;
 		for(int i=0;i<N;i++)for(int j=0;j<M;j++)a[i][j]=a[i][j]>=T?1:0;
 		for(int i=0;i<N;i++){
 			for(int j=0;j<M;j++){
