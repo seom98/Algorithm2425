@@ -1,15 +1,1 @@
-import java.util.*;
-interface Main{
-	static void main(String[]z){
-		Scanner s=new Scanner(System.in);
-		int N=s.nextInt()+1,M=s.nextInt()+1,a[][]=new int[N][M],i,j;
-		for(i=1;i<N;i++)for(j=1;j<M;j++)a[i][j]=s.nextInt()+a[i][j-1];
-		N=s.nextInt();StringBuilder b=new StringBuilder();
-		while(N-->0){
-			int x[]=new int[4],S=0;for(i=0;i<4;i++)x[i]=s.nextInt();
-			for(i=x[0];i<=x[2];i++)S+=a[i][x[3]]-a[i][x[1]-1];
-			b.append(S+"\n");
-		}
-		System.out.print(b);
-	}
-}
+import java.util.*;interface Main{static void main(String[]z){Scanner s=new Scanner(System.in);int N=s.nextInt()+1,M=s.nextInt()+1,a[][]=new int[N][M],i,j;for(i=1;i<N;i++)for(j=1;j<M;j++)a[i][j]=s.nextInt()+a[i][j-1];N=s.nextInt();StringBuilder b=new StringBuilder();while(N-->0){int x[]=new int[4],S=0;for(i=0;i<4;i++)x[i]=s.nextInt();for(i=x[0];i<=x[2];i++)S+=a[i][x[3]]-a[i][x[1]-1];b.append(S+"\n");}System.out.print(b);}}
