@@ -1,1 +1,1 @@
-import java.util.*;interface Main{static void main(String[]z){Scanner s=new Scanner(System.in);long N=(s.nextLong()+1)/2,M=(s.nextLong())/2;if(N<2){N=2;if(M<2)M=1;}System.out.print((N+M)*(M-N+1));}}
+interface Main{static void main(String[]z){var s=new java.util.Scanner(System.in);long N=(s.nextLong()+1)/2,M=(s.nextLong())/2;if(N<2)N=2;if(M<2)M=1;System.out.print((N+M)*(M-N+1));}}
